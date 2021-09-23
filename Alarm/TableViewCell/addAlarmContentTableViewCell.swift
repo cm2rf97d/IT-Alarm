@@ -25,7 +25,9 @@ class addAlarmContentTableViewCell: UITableViewCell {
     }()
     
     let detailImageView: UIImageView = {
+        // 設定這個 imageView 的圖案為 "chevron.right"
         let imageView = UIImageView(image: UIImage(systemName: "chevron.right"))
+        // 設定這格 imageView 的顏色為灰色
         imageView.tintColor = .lightGray
         return imageView
     }()
@@ -34,7 +36,8 @@ class addAlarmContentTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.backgroundColor = #colorLiteral(red: 0.1734634042, green: 0.1683282256, blue: 0.1771324873, alpha: 1)
-//        self.accessoryView = detailImageView
+        // 設定accessoryView 為 detailImageView(剛剛製作的View)
+        self.accessoryView = detailImageView
         setViews()
         setLayouts()
     }

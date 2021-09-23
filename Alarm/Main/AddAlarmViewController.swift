@@ -56,6 +56,7 @@ class AddAlarmViewController: UIViewController, UITableViewDelegate, UITableView
         // 註冊 addAlarmContentTableViewCell
         tableView.register(addAlarmContentTableViewCell.self,
                            forCellReuseIdentifier: addAlarmContentTableViewCell.identifier)
+        tableView.bounces = false
         return tableView
     }()
     
