@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06174BB826FC7D4B0042C42F /* AddAlarmButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06174BB726FC7D4B0042C42F /* AddAlarmButtonTableViewCell.swift */; };
+		0671C41E2708B22200282E8A /* AlarmHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0671C41D2708B22200282E8A /* AlarmHeaderView.swift */; };
+		0686DEA826FDF497000E6B2A /* AlarmLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0686DEA726FDF497000E6B2A /* AlarmLabelViewController.swift */; };
+		0686DEAC2701C5FE000E6B2A /* RepeatAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0686DEAB2701C5FE000E6B2A /* RepeatAlarmViewController.swift */; };
+		0686DEAE2701C942000E6B2A /* RepeatAlarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0686DEAD2701C942000E6B2A /* RepeatAlarmTableViewCell.swift */; };
+		06D27F93270B57EE00365430 /* WakeUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D27F92270B57EE00365430 /* WakeUpTableViewCell.swift */; };
 		271A788426EF601A00B0CB3E /* MainTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271A788326EF601A00B0CB3E /* MainTabbarViewController.swift */; };
 		271A788626EF604B00B0CB3E /* WorldClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271A788526EF604B00B0CB3E /* WorldClockViewController.swift */; };
 		271A788826EF60D700B0CB3E /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271A788726EF60D700B0CB3E /* AlarmViewController.swift */; };
@@ -18,10 +24,16 @@
 		2732FD2226EC5DFD00C143B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2732FD2126EC5DFD00C143B5 /* Assets.xcassets */; };
 		2732FD2526EC5DFD00C143B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2732FD2326EC5DFD00C143B5 /* LaunchScreen.storyboard */; };
 		27E10D8426F376CB009D8B87 /* AddAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E10D8326F376CB009D8B87 /* AddAlarmViewController.swift */; };
-		27ED94DF26F6EDA700493ACA /* addAlarmContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED94DE26F6EDA700493ACA /* addAlarmContentTableViewCell.swift */; };
+		27ED94DF26F6EDA700493ACA /* AddAlarmContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED94DE26F6EDA700493ACA /* AddAlarmContentTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06174BB726FC7D4B0042C42F /* AddAlarmButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmButtonTableViewCell.swift; sourceTree = "<group>"; };
+		0671C41D2708B22200282E8A /* AlarmHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmHeaderView.swift; sourceTree = "<group>"; };
+		0686DEA726FDF497000E6B2A /* AlarmLabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmLabelViewController.swift; sourceTree = "<group>"; };
+		0686DEAB2701C5FE000E6B2A /* RepeatAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatAlarmViewController.swift; sourceTree = "<group>"; };
+		0686DEAD2701C942000E6B2A /* RepeatAlarmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatAlarmTableViewCell.swift; sourceTree = "<group>"; };
+		06D27F92270B57EE00365430 /* WakeUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeUpTableViewCell.swift; sourceTree = "<group>"; };
 		271A788326EF601A00B0CB3E /* MainTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarViewController.swift; sourceTree = "<group>"; };
 		271A788526EF604B00B0CB3E /* WorldClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockViewController.swift; sourceTree = "<group>"; };
 		271A788726EF60D700B0CB3E /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
@@ -34,7 +46,7 @@
 		2732FD2426EC5DFD00C143B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2732FD2626EC5DFD00C143B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27E10D8326F376CB009D8B87 /* AddAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmViewController.swift; sourceTree = "<group>"; };
-		27ED94DE26F6EDA700493ACA /* addAlarmContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addAlarmContentTableViewCell.swift; sourceTree = "<group>"; };
+		27ED94DE26F6EDA700493ACA /* AddAlarmContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmContentTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +100,7 @@
 				2732FD2126EC5DFD00C143B5 /* Assets.xcassets */,
 				2732FD2326EC5DFD00C143B5 /* LaunchScreen.storyboard */,
 				2732FD2626EC5DFD00C143B5 /* Info.plist */,
+				0671C41D2708B22200282E8A /* AlarmHeaderView.swift */,
 			);
 			path = Alarm;
 			sourceTree = "<group>";
@@ -95,7 +108,9 @@
 		27E10D8626F494C7009D8B87 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				0686DEA726FDF497000E6B2A /* AlarmLabelViewController.swift */,
 				27E10D8326F376CB009D8B87 /* AddAlarmViewController.swift */,
+				0686DEAB2701C5FE000E6B2A /* RepeatAlarmViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -103,7 +118,10 @@
 		27E10D8726F58733009D8B87 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				27ED94DE26F6EDA700493ACA /* addAlarmContentTableViewCell.swift */,
+				27ED94DE26F6EDA700493ACA /* AddAlarmContentTableViewCell.swift */,
+				06174BB726FC7D4B0042C42F /* AddAlarmButtonTableViewCell.swift */,
+				0686DEAD2701C942000E6B2A /* RepeatAlarmTableViewCell.swift */,
+				06D27F92270B57EE00365430 /* WakeUpTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -184,14 +202,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				271A788426EF601A00B0CB3E /* MainTabbarViewController.swift in Sources */,
+				0686DEA826FDF497000E6B2A /* AlarmLabelViewController.swift in Sources */,
+				06174BB826FC7D4B0042C42F /* AddAlarmButtonTableViewCell.swift in Sources */,
+				06D27F93270B57EE00365430 /* WakeUpTableViewCell.swift in Sources */,
 				271A788826EF60D700B0CB3E /* AlarmViewController.swift in Sources */,
 				2732FD1926EC5DFA00C143B5 /* AppDelegate.swift in Sources */,
 				27E10D8426F376CB009D8B87 /* AddAlarmViewController.swift in Sources */,
 				271A788C26EF610400B0CB3E /* TimerViewController.swift in Sources */,
+				0686DEAE2701C942000E6B2A /* RepeatAlarmTableViewCell.swift in Sources */,
+				0671C41E2708B22200282E8A /* AlarmHeaderView.swift in Sources */,
 				2732FD1B26EC5DFA00C143B5 /* SceneDelegate.swift in Sources */,
 				271A788A26EF60F400B0CB3E /* StopWatchViewController.swift in Sources */,
 				271A788626EF604B00B0CB3E /* WorldClockViewController.swift in Sources */,
-				27ED94DF26F6EDA700493ACA /* addAlarmContentTableViewCell.swift in Sources */,
+				27ED94DF26F6EDA700493ACA /* AddAlarmContentTableViewCell.swift in Sources */,
+				0686DEAC2701C5FE000E6B2A /* RepeatAlarmViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

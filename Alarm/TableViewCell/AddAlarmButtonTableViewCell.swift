@@ -1,15 +1,15 @@
 //
-//  addAlarmTextTableViewCell.swift
+//  AddAlarmButtonTableViewCell.swift
 //  Alarm
 //
-//  Created by 陳郁勳 on 2021/9/18.
+//  Created by sapido on 2021/9/23.
 //
 
 import UIKit
 
-class addAlarmContentTableViewCell: UITableViewCell {
-
-    static let identifier = "addAlarmContentTableViewCell"
+class AddAlarmButtonTableViewCell: UITableViewCell {
+    
+    static let identifier = "addAlarmButtonTableViewCell"
 
     // MARK: - IBOutLets
     let titleLabel: UILabel = {
@@ -18,26 +18,12 @@ class addAlarmContentTableViewCell: UITableViewCell {
         return label
     }()
 
-    let contentLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .lightGray
-        return label
-    }()
-    
-    let detailImageView: UIImageView = {
-        // 設定這個 imageView 的圖案為 "chevron.right"
-        let imageView = UIImageView(image: UIImage(systemName: "chevron.right"))
-        // 設定這格 imageView 的顏色為灰色
-        imageView.tintColor = .lightGray
-        return imageView
-    }()
-
     // MARK: - Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.backgroundColor = #colorLiteral(red: 0.1734634042, green: 0.1683282256, blue: 0.1771324873, alpha: 1)
-        // 設定accessoryView 為 detailImageView(剛剛製作的View)
-        self.accessoryView = detailImageView
+        // 設定accessoryView 為 UISwitch
+        self.accessoryView = UISwitch(frame: .zero)
         setViews()
         setLayouts()
     }
@@ -48,7 +34,6 @@ class addAlarmContentTableViewCell: UITableViewCell {
     // MARK: - setViews
     func setViews() {
         self.addSubview(titleLabel)
-        self.addSubview(contentLabel)
     }
 
     // MARK: - setLayouts
@@ -58,11 +43,6 @@ class addAlarmContentTableViewCell: UITableViewCell {
             make.top.bottom.equalTo(self)
             // titleLabel 的左邊距離TableViewCell的左邊間隔10
             make.leading.equalTo(self).offset(10)
-        }
-
-        contentLabel.snp.makeConstraints { make in
-            // contentLabel 的頂部、底部、右邊都貼齊TableViewCell
-            make.trailing.top.bottom.equalTo(self)
         }
     }
 }

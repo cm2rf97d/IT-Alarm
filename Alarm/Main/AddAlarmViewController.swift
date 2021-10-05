@@ -14,19 +14,66 @@ class AddAlarmViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // 告知TableView要使用哪個Cell
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: addAlarmContentTableViewCell.identifier, for: indexPath)
-                as? addAlarmContentTableViewCell else { return UITableViewCell() }
+        
+        switch indexPath.row {
+        
+        // 當TableView顯示到第四欄時，顯示剛剛新增的AddAlarmButtonTableViewCell
+        case 3:
+            
+            // 告知TableView要使用哪個Cell
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: AddAlarmButtonTableViewCell.identifier, for: indexPath) as? AddAlarmButtonTableViewCell else { return UITableViewCell() }
+            
+            // 設定Cell的TitleLabel內容
+            cell.titleLabel.text = addAlarmTitles[indexPath.row]
+            return cell
+            
+        // 其他的欄位，顯示之前新增的AddAlarmContentTableViewCell
+        default:
+            
+            // 告知TableView要使用哪個Cell
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: AddAlarmContentTableViewCell.identifier, for: indexPath)
+                    as? AddAlarmContentTableViewCell else { return UITableViewCell() }
 
-        // 設定Cell的TitleLabel內容
-        cell.titleLabel.text = addAlarmTitles[indexPath.row]
-        return cell
+            // 設定Cell的titleLabel內容
+            cell.titleLabel.text = addAlarmTitles[indexPath.row]
+            
+            // 設定Cell的contentLabel內容
+            cell.contentLabel.text = addAlarmDetails[indexPath.row]
+            return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        switch indexPath.row {
+        // 點擊第一欄時，要做什麼
+        case 0:
+            let vc = RepeatAlarmViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        // 點擊第二欄時，要做什麼
+        case 1:
+            let vc = AlarmLabelViewController()
+            
+            // 讓AddAlarmViewController成為
+            // AlarmLabelViewController的updateAlarmLabelDelegate的執行者
+            vc.updateAlarmLabelDelegate = self
+            
+            // 使用navigationController的pushViewController()，達到畫面由右至左的效果。
+            self.navigationController?.pushViewController(vc, animated: true)
+        // 點擊第三欄時，要做什麼
+        case 2:
+            break
+        // 點擊第四欄時，要做什麼
+        case 3:
+            break
+        default:
+            break
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
-    
 
     // MARK: - IBLetOuts
     let timeLabel: UILabel = {
@@ -54,14 +101,25 @@ class AddAlarmViewController: UIViewController, UITableViewDelegate, UITableView
     let addAlarmTableView: UITableView  = {
         let tableView = UITableView()
         // 註冊 addAlarmContentTableViewCell
-        tableView.register(addAlarmContentTableViewCell.self,
-                           forCellReuseIdentifier: addAlarmContentTableViewCell.identifier)
+        tableView.register(AddAlarmContentTableViewCell.self,
+                           forCellReuseIdentifier: AddAlarmContentTableViewCell.identifier)
+        
+        // 註冊 addAlarmButtonTableViewCell
+        tableView.register(AddAlarmButtonTableViewCell.self,
+                           forCellReuseIdentifier: AddAlarmButtonTableViewCell.identifier)
+        
         tableView.bounces = false
         return tableView
     }()
     
     // MARK: - Properties
     let addAlarmTitles = ["重複","標籤","提示聲","重複提醒"]
+    var addAlarmDetails = ["永不","鬧鐘","雷達"] {
+        didSet {
+            // TableView重新抓取值
+            addAlarmTableView.reloadData()
+        }
+    }
     
     // MARK: - LifrCycle
     override func viewDidLoad() {
@@ -150,21 +208,10 @@ class AddAlarmViewController: UIViewController, UITableViewDelegate, UITableView
     }
 }
 
-//extension AddAlarmViewController: UITableViewDelegate, UITableViewDataSource {
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return addAlarmTitles.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: addAlarmContentTableViewCell.identifier, for: indexPath) as? addAlarmContentTableViewCell else { return UITableViewCell() }
-//
-//        cell.titleLabel.text = addAlarmTitles[indexPath.row]
-//        return cell
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 50
-//    }
-//}
+extension AddAlarmViewController: UpdateAlarmLabelDelegate {
+
+    func updateAlarmLabel(alarmLabelText: String) {
+        // 讓第二行Cell的Detail顯示回傳回來的文字
+        self.addAlarmDetails[1] = alarmLabelText
+    }
+}
